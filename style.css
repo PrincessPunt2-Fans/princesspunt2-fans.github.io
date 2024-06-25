@@ -1,0 +1,357 @@
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.preface {
+	border: 2px dotted black;
+	text-align: center;
+	color: red;
+	width: 50%
+}
+
+.grid_table > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+span {
+	vertical-align: middle;
+}
+
+img {
+	vertical-align: middle;
+}
+
+.item-id {
+	color: transparent;
+}
+
+.item-id + table {
+	border: 1px solid black;
+}
+
+table {
+	border-collapse: collapse;
+	table-layout: fixed;
+	border-style: hidden;
+}
+
+table.goods, .pet_skill > table {
+	table-layout: auto;
+}
+
+td {
+	border: 1px solid black;
+	padding: 0px;
+	text-align: center; 
+	vertical-align: middle;
+}
+
+.item_icon {
+	padding: 0px;
+	width: 96px;
+	height: 96px;
+}
+
+.item_icon img:nth-child(1) {
+	width: 96px;
+	height: 96px;
+}
+
+.item_icon2 {
+	position: relative;
+}
+
+.item_icon2  > img:nth-child(1) {
+	position: relative;  
+	z-index: 1;
+}
+
+.item_icon2  > img:nth-child(2) {
+	position: absolute;  
+	z-index: 2; 
+	left: 0; 
+	bottom: 0;
+}
+
+table:not(.weapon) .equipment_effect {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	place-items: center;
+}
+
+table.goods .equipment_effect {
+	grid-template-columns: 1fr 1fr;
+}
+
+.equipment_effect img {
+	width: 20px;
+}
+
+.special_material_no{
+	display: none;
+}
+
+.pet_type {
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+}
+
+ .pet_skill_val:empty {
+	display: none;
+ }
+ 
+.add_area, .pet_status, .pet_skill, .weap_leader {
+	padding: 0px;
+}
+
+.pet_skill_text {
+	text-align: left; 
+}
+.pet_evo {
+	display: grid;
+	grid-template-columns: 96px auto 96px;
+	place-items: center;
+}
+.pet_evo_material {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	outline: 1px solid black;
+	padding: 10px;
+}
+
+.book_Result {
+	display: grid;
+	grid-template-columns: 1fr 10% 1fr;
+	place-items: center;
+	padding: 5px 0;
+}
+
+.book_Result > div {
+	flex-direction: column;
+}
+
+.book_GreatSuccess_odds {
+	text-align: center;
+	outline: 1px solid black;
+	padding: 5px;
+}
+
+.book_GreatSuccess_odds:empty {
+	visibility:hidden;
+}
+
+.book_Material {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(calc(100% / 12), 1fr));
+	place-items: center;
+	padding: 0px;
+	width: 100%;
+}
+
+.book_Material:not(:has(:nth-child(4))) {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.book_Material > div {
+	flex-direction: column;
+	padding: 10px 0;
+}
+
+.book_Material_item {
+	flex-direction: column;
+}
+
+.book_Material_item > img {
+	width: 80%;
+}
+
+.book_Material_item > a {
+	line-height: 0.8;
+	padding-top: 5px;
+}
+/*
+.book_Material_num {
+	position: absolute;  
+	z-index: 2; 
+	right: calc(10% + 2px); 
+	bottom: calc(10px + 1px);
+	line-height: 1em;
+	font-size: 1.5em;
+	font-family: "Arial Black";
+	color: white;
+	-webkit-text-stroke: 2px black;
+}*/
+
+.tooltip_popup {
+	position: relative;
+}
+
+.tooltip_content {
+	display: none;
+	position: absolute;
+	top: -5px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(0, 0, 0, 0.8);
+	color: white;
+	padding: 0px 5px;
+	border-radius: 5px;
+	white-space: nowrap;
+	z-index: 999;
+}
+
+.tooltip_popup:hover .tooltip_content {
+	display: block;
+}
+
+.book_Result {
+	position: relative;
+}
+			
+.book_GreatSuccess_branch {
+	visibility : hidden;
+	display: grid;
+	grid-template-columns: 32px 1fr 1fr 1fr;
+	align-items: center;
+	position: absolute;
+	bottom: 5px;
+	width: 250px;
+	height: 96px;
+}
+
+.book_GreatSuccess_branch img {
+	width: 25px;
+}
+
+.book_GreatSuccess_branch_yes:hover .book_GreatSuccess_branch {
+	visibility : visible;
+}
+
+.book_GreatSuccess_branch_yes:hover > img {
+	visibility : hidden;
+}
+
+.job_name {
+	font-weight: bold;
+}
+
+.skill_description, .characteristic_area {
+	text-align: left;
+	padding: 5px;
+}
+
+.equitUpPowVal {
+	font-family: "Arial";
+}
+
+.characteristic_container {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+.characteristic {
+	display: flex;
+	align-items: center;
+	border: 1px solid;
+	border-radius: 1em;
+	padding: 0px 0.5em;
+	flex: 0 auto;
+}
+
+.characteristic_release {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	place-items: center;
+	border: 1px solid black;
+	margin-left: auto;
+	width: 20%;
+	min-width: 300px;
+	padding: 5px;
+	gap: 5px;
+}
+
+.characteristic_plus11 {
+	display: flex;
+	border: 1px solid black;
+	align-items: center;
+	margin-left: auto;
+	min-width: 300px;
+	padding: 5px;
+	gap: 5px;
+}
+
+.characteristic_plus11 > div:first-child {
+	flex-grow: 1;
+	align-items: center;
+	width: 200px;
+}
+
+.members_group_title {
+	display: block;
+	width: 80%;
+	background-color: #FFFF99;
+	text-align: center;
+	margin: 1em auto 2em auto;
+}
+
+hr {
+	margin: 2em 0;
+}
+
+#magicalmirai, #snowmiku {
+	background-color: #39C5BB;
+	width: 60%;
+	margin-top: 2.5em;
+}
+
+.collabo_partner {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+.group_list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	gap: 5px;
+	margin: 2em 0;
+}
+
+.group_list > a {
+	flex-grow: 1;
+	background-color: LightPink;
+	border: 1px solid DarkViolet;
+	border-radius: 10px;
+	color: black;
+	text-decoration: none;
+	padding: 5px;
+}
+
+.battle_skill {
+	border: 1px solid black;
+	float: right;
+	max-width: 600px;
+	min-width: 350px;
+}
+
+.bs_kicks_base {
+	font-size: 0.5em;
+}
+
+.no_border_left {
+	border-left: none;
+}
+
+.no_border_right {
+	border-right: none;
+}
