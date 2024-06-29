@@ -306,7 +306,7 @@ hr {
 	margin: 2em 0;
 }
 
-#magicalmirai, #snowmiku {
+.members_group_title.sub_group {
 	background-color: #39C5BB;
 	width: 60%;
 	margin-top: 2.5em;
