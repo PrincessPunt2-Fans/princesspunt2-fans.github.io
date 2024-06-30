@@ -195,14 +195,6 @@ table.goods .equipment_effect {
 .tooltip_content {
 	display: none;
 	position: absolute;
-	z-index: 999;
-}
-
-.tooltip_popup:hover .tooltip_content {
-	display: block;
-}
-
-.book_Material_name {
 	top: -5px;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -211,24 +203,11 @@ table.goods .equipment_effect {
 	padding: 0px 5px;
 	border-radius: 5px;
 	white-space: nowrap;
+	z-index: 999;
 }
 
-.characteristic_info {
-	font-size: 0.9em;
-	bottom: 2em;
-	left: 0px;
-	background: gray;
-	border: 1px solid black;
-	color: white;
-	padding: 0px 5px;
-	max-width: 25vw;
-	width: max-content;
-	border-radius: 5px;
-}
-
-:is(.characteristic_release, .characteristic_plus11) .characteristic_info {
-	right: 0px;
-	left: auto;
+.tooltip_popup:hover .tooltip_content {
+	display: block;
 }
 
 .book_Result {
