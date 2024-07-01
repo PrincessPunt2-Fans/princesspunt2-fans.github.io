@@ -220,7 +220,7 @@ table.goods .equipment_effect {
 	background: gray;
 	border: 1px solid black;
 	color: white;
-	padding: 0px 5px;
+	padding: 0px 3px;
 	max-width: 25vw;
 	width: max-content;
 	border-radius: 5px;
@@ -369,10 +369,23 @@ hr {
 	font-size: 0.5em;
 }
 
-.no_border_left {
+.placeholder_field {
 	border-left: none;
 }
 
-.no_border_right {
+td:has(+ .placeholder_field) {
 	border-right: none;
+}
+
+.skill_name_trans {
+	border: 1px solid black;
+	width: 50%;
+	max-width: 300px;
+	text-align: center;
+	margin: 0 auto 5px auto;
+}
+
+.skill_name_trans > div:nth-child(odd) {
+	text-align: left;
+	font-size: 0.8em;
 }
