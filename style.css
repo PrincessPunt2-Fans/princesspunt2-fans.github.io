@@ -405,3 +405,21 @@ td:has(+ .placeholder_field) {
 	text-align: left;
 	font-size: 0.8em;
 }
+
+.stoneWorth {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	place-items: center;
+}
+
+.stoneWorth img {
+	height: 24px;
+}
+
+.stone_group {
+	text-align: center;
+}
+
+table +h2 {
+	margin-top: 1.5em;
+}
