@@ -218,7 +218,7 @@ table.goods .equipment_effect {
 	display: block;
 }
 
-.book_Material_name {
+.book_Material_name, .special_material_name {
 	top: -5px;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -227,6 +227,10 @@ table.goods .equipment_effect {
 	padding: 0px 5px;
 	border-radius: 5px;
 	white-space: nowrap;
+}
+
+.special_material_name {
+	top: -15px;
 }
 
 .characteristic_info {
