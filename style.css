@@ -39,7 +39,7 @@ table {
 	border-style: hidden;
 }
 
-table.goods, .pet_skill > table {
+table:is(.goods, .pluscan), .pet_skill > table {
 	table-layout: auto;
 }
 
@@ -426,4 +426,52 @@ td:has(+ .placeholder_field) {
 
 table +h2 {
 	margin-top: 1.5em;
+}
+
+.pluscan_use {
+	display: grid;
+	grid-template-columns: minmax(200px,15%) auto;
+	place-items: center start;
+	text-align: left;
+	width: 100%;
+	margin-left: 5px;
+}
+
+.pluscan_targets {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	gap: 10px;
+	padding: 10px;
+	flex-wrap: wrap;
+}
+
+.pluscan_targets img {
+	width: 80px;
+}
+
+.pluscan_target_char {
+	position: relative;
+}
+.pluscan_target_name {
+	position: absolute;
+	display: none;
+	z-index: 999;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	left: 50%;
+    transform: translateX(-50%);
+	box-sizing: border-box;
+	min-width: 80px;
+	height: 80px;
+	border-radius: 5px;
+	white-space: nowrap;
+	font-size: 0.8em;
+	background: rgba(0, 0, 0, 0.6);
+	color: white;	
+}
+
+.pluscan_target_char:hover .pluscan_target_name {
+	display: flex;
 }
