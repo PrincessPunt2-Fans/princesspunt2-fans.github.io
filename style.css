@@ -218,7 +218,7 @@ table.goods .equipment_effect {
 	display: block;
 }
 
-.book_Material_name, .special_material_name {
+.book_Material_name, .special_material_name, .pet_evo_material_name {
 	top: -5px;
 	left: 50%;
 	transform: translate(-50%, -50%);
