@@ -251,7 +251,7 @@ table.goods .equipment_effect {
 	left: auto;
 }
 
-.book_Result {
+.book_Result, .book_Name {
 	position: relative;
 }
 			
@@ -276,6 +276,22 @@ table.goods .equipment_effect {
 
 .book_GreatSuccess_branch_yes:hover > img {
 	visibility : hidden;
+}
+
+.book_Cost {
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	padding: 2px;
+	margin: 2px;
+	display: flex;
+	border: 1px solid black;
+	align-items: center;
+	justify-content: center;
+}
+
+.book_Cost img {
+	height: 1em;
 }
 
 .job_name {
