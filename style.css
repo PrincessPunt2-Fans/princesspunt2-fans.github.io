@@ -491,3 +491,13 @@ table +h2 {
 .pluscan_target_char:hover .pluscan_target_name {
 	display: flex;
 }
+
+.weap_charSpecific {
+	display: grid;
+	grid-template-columns: 96px 96px auto 96px;
+	place-items: center;
+}
+
+.weap_charSpecific > div:first-child {
+	writing-mode: vertical-lr;
+}
