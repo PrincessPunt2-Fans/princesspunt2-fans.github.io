@@ -107,13 +107,22 @@ table.goods .equipment_effect {
 	z-index: -1;
 }
 
-.special_material_no{
-	display: none;
+.special_material {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center; 
 }
 
 .pet_type {
 	writing-mode: vertical-rl;
 	text-orientation: upright;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center; 
+	width: 100%;
+
 }
 
  .pet_skill_val:empty {
