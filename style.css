@@ -1,7 +1,8 @@
 
 body {
-	width: clamp(500px, 100%, 1000px);
+	width: clamp(500px, 99%, 1000px);
 	margin: auto;
+	padding-bottom: 5px;
 }
 
 .center {
