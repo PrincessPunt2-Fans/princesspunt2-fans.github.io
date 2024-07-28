@@ -570,6 +570,10 @@ h3 > div {
 	width: 80px;
 }
 
+.specialWeapon {
+	margin-bottom: 0.5em;
+}
+
 .charScore {
 	border: 1px solid black;
 	width: 200px;
