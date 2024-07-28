@@ -1,3 +1,9 @@
+
+body {
+	width: clamp(500px, 100%, 1000px);
+	margin: auto;
+}
+
 .center {
 	display: flex;
 	align-items: center;
@@ -39,11 +45,11 @@ table {
 	border-style: hidden;
 }
 
-table:is(.goods, .pluscan), .pet_skill > table {
+table:is(.goods, .pluscan), .pet_skill > table, .upgradeStatus {
 	table-layout: auto;
 }
 
-td {
+td, th {
 	border: 1px solid black;
 	padding: 0px;
 	text-align: center; 
@@ -135,12 +141,15 @@ table.goods .equipment_effect {
 
 .pet_skill_text {
 	text-align: left; 
+	padding-left: 5px;
 }
+
 .pet_evo {
 	display: grid;
 	grid-template-columns: 96px auto 96px;
 	place-items: center;
 }
+
 .pet_evo_material {
 	display: flex;
 	align-items: center;
@@ -435,13 +444,13 @@ td:has(+ .placeholder_field) {
 	font-size: 0.8em;
 }
 
-.stoneWorth {
+.stoneWorth, .itemWorth {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	place-items: center;
 }
 
-.stoneWorth img {
+:is(.stoneWorth, .itemWorth) img {
 	height: 24px;
 }
 
@@ -508,5 +517,142 @@ table +h2 {
 }
 
 .weap_charSpecific > div:first-child {
+	writing-mode: vertical-lr;
+}
+
+.singleEquipment, .singleCharacter, .singleSupporter {
+	table-layout: auto;
+	margin-top: 30px;
+}
+
+h3 {
+	margin-top: 3.5em;
+}
+
+h3 > div {
+	font-weight: normal;
+	font-size: small;
+}
+
+
+.singleEquipment, .extraSkill, .upgradeStatus, .singleCharacter, .specialWeapon, .singleSupporter, .pet_skill_single {
+	border: 1px solid black;
+}
+
+.upgradeStatus th:first-child {
+	width: 50px;
+}
+
+.upgradeStatus img {
+	width: 20px;
+}
+
+.auto_weapon {
+	display: grid;
+	grid-template-columns: 1fr 1fr; 
+	gap: 10px;
+}
+
+.auto_weapon > div:only-child {
+	grid-column: 1 / -1;
+}
+
+.auto_weapon > div {
+	display: grid;
+	grid-template-columns: 80px 1fr auto;
+	place-items: center;
+	padding: 5px;
+	border: 1px solid black;
+}
+
+.auto_weapon img {
+	width: 80px;
+}
+
+.charScore {
+	border: 1px solid black;
+	width: 200px;
+}
+
+.charScore td:first-child {
+	width: 75px;
+	white-space: nowrap;
+}
+
+.upgradeStatus :is(td, th) {
+	white-space: nowrap;
+	padding: 0 1em;
+}
+  
+th img {
+	display: block;
+	margin: auto;
+}
+ 
+.pet_lvTitle {
+	width: 50px;
+	padding: 0 0.5em;
+}
+
+.pet_totalExp {
+	border: 1px solid black;
+	line-height: 1em;
+	padding: 1px;
+	margin: 2px;
+	display: inline-block;
+}
+
+.pet_skillVal_list {
+	display: grid;
+	grid-template-columns: 10% repeat(5, 1fr);
+	grid-template-rows: auto auto;
+	place-items: center;
+}
+
+.pet_skillVal_list > div:first-child {
+	grid-row: 1 / -1;
+}
+
+.pet_sepcialGrowMaterial {
+	display: grid;
+	grid-template-columns: minmax(120px, max-content) 100px;
+	grid-template-rows: 2fr 3fr;
+	place-items: center;
+	border: 1px solid black;
+	width: max-content;
+	text-align: center;
+}
+
+.pet_sepcialGrowMaterial > div:first-child {
+	grid-row: 1 / -1;
+}
+
+.pet_sepcialGrowMaterial img {
+	width: 72px;
+}
+
+.pet_evoRelationship {
+	display: grid;
+	grid-template-columns: 96px 30px max-content 30px auto 96px;
+	place-items: center;
+	border: 1px solid black;
+	text-align: center;
+}
+
+.pet_evoCost {
+	display: grid;
+	grid-template-rows: auto auto;
+	place-items: center;
+	height: 100%;
+	margin: 0 5px;
+}
+
+.pet_evoCost > div:first-child {
+	border: 1px solid black;
+	padding: 2px;
+	margin: 2px;
+}
+
+.pet_evoDirection {
 	writing-mode: vertical-lr;
 }
