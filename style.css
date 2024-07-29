@@ -84,6 +84,11 @@ td, th {
 	bottom: 0;
 }
 
+.item_name a {
+	color: black;
+	text-decoration: none;
+}
+
 table:not(.weapon) .equipment_effect {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
