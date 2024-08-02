@@ -89,6 +89,15 @@ td, th {
 	text-decoration: none;
 }
 
+.item_name div {
+	display: inline;
+}
+
+.item_name div:after {
+	content: "";
+	display: block;
+}
+
 table:not(.weapon) .equipment_effect {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
