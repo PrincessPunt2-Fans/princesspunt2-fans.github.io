@@ -84,16 +84,16 @@ td, th {
 	bottom: 0;
 }
 
-.item_name a {
+.character .item_name a {
 	color: black;
 	text-decoration: none;
 }
 
-.item_name div {
+.character .item_name div {
 	display: inline;
 }
 
-.item_name div:after {
+.character .item_name div:after {
 	content: "";
 	display: block;
 }
@@ -136,7 +136,7 @@ table.goods .equipment_effect {
 }
 
 .pet_type {
-	writing-mode: vertical-rl;
+	writing-mode: vertical-lr;
 	text-orientation: upright;
 	display: flex;
 	justify-content: center;
