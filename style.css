@@ -251,7 +251,7 @@ table.goods .equipment_effect {
 	display: block;
 }
 
-.book_Material_name, .special_material_name, .pet_evo_material_name {
+.book_Material_name, .special_material_name, .pet_evo_material_name, .dress_dress_dropName {
 	top: -5px;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -674,4 +674,24 @@ th img {
 
 .pet_evoDirection {
 	writing-mode: vertical-lr;
+}
+
+.dress_dream_condition {
+	display: inline-block;
+	border: 1px solid black;
+	padding: 0 5px;
+}
+
+.dress_dress_drop {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	padding: 5px 0;
+}
+
+.dress_dress_drop img {
+	width: 80px;
+}
+
+.dress_dress_dropName {
+	top: -15px;
 }
