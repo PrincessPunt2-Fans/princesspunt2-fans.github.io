@@ -1,8 +1,20 @@
+@font-face {
+	font-family: Noto Sans JP;
+	src: local("Noto Sans JP")
+	ascent-override: 100%;
+}
+
+@font-face {
+	font-family: Noto Sans TC;
+	src: local("Noto Sans TC")
+	ascent-override: 100%;
+}
 
 body {
 	width: clamp(500px, 99%, 1000px);
 	margin: auto;
 	padding: 5px;
+	font-family: "Meiryo", "Microsoft JhengHei", "Noto Sans JP", "Noto Sans TC", sans-serif;
 }
 
 .center {
