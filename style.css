@@ -1,12 +1,12 @@
 @font-face {
 	font-family: Noto Sans JP;
-	src: local("Noto Sans CJK JP")
+	src: local("Noto Sans CJK JP");
 	ascent-override: 100%;
 }
 
 @font-face {
 	font-family: Noto Sans TC;
-	src: local("Noto Sans CJK TC")
+	src: local("Noto Sans CJK TC");
 	ascent-override: 100%;
 }
 
