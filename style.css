@@ -1,8 +1,10 @@
+@import url('/fonts.css');
 
 body {
 	width: clamp(500px, 99%, 1000px);
 	margin: auto;
 	padding: 5px;
+	font-family: "Noto Sans JP", "Noto Sans TC", sans-serif;
 }
 
 .center {
