@@ -14,7 +14,7 @@ body {
 	width: clamp(500px, 99%, 1000px);
 	margin: auto;
 	padding: 5px;
-	font-family: "Meiryo", "Microsoft JhengHei", "Noto Sans JP", "Noto Sans TC", sans-serif;
+	font-family: "Meiryo", "Microsoft JhengHei", "Noto Sans CJK JP", "Noto Sans CJK TC", sans-serif;
 }
 
 .center {
