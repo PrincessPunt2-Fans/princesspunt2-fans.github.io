@@ -118,7 +118,7 @@ table.goods .equipment_effect {
 	width: 20px;
 }
 
-.equipment_effect > div {
+.equipment_effect > div, .attrIcon {
 	position: relative;
 }
 
@@ -131,6 +131,7 @@ table.goods .equipment_effect {
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
+	top: 0;
 	z-index: -1;
 }
 
