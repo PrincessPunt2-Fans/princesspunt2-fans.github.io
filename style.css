@@ -641,7 +641,7 @@ th img {
 
 .pet_sepcialGrowMaterial {
 	display: grid;
-	grid-template-columns: minmax(120px, max-content) 100px;
+	grid-template-columns: minmax(200px, max-content) 100px;
 	grid-template-rows: 2fr 3fr;
 	place-items: center;
 	border: 1px solid black;
@@ -701,4 +701,13 @@ th img {
 
 .dress_dress_dropName {
 	top: -15px;
+}
+
+.pet_sepcialGrowMaterial_area {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-start;
+	text-align: center;
+	gap: 5px;
 }
