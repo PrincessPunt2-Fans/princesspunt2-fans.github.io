@@ -639,10 +639,19 @@ th img {
 	grid-row: 1 / -1;
 }
 
+.pet_sepcialGrowMaterial_area {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-start;
+	text-align: center;
+	gap: 5px;
+}
+
 .pet_sepcialGrowMaterial {
 	display: grid;
-	grid-template-columns: minmax(200px, max-content) 100px;
-	grid-template-rows: 2fr 3fr;
+	grid-template-columns: minmax(100px, max-content) 100px;
+	grid-template-rows: auto 2fr 3fr;
 	place-items: center;
 	border: 1px solid black;
 	width: max-content;
@@ -650,11 +659,16 @@ th img {
 }
 
 .pet_sepcialGrowMaterial > div:first-child {
-	grid-row: 1 / -1;
+	grid-column: 1 / -1;
 }
 
 .pet_sepcialGrowMaterial img {
+	grid-row: 2 / -1;
 	width: 72px;
+}
+
+.pet_sepcialGrowMaterial > div:last-child {
+	line-height: 1;
 }
 
 .pet_evoRelationship {
@@ -701,13 +715,4 @@ th img {
 
 .dress_dress_dropName {
 	top: -15px;
-}
-
-.pet_sepcialGrowMaterial_area {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: flex-start;
-	text-align: center;
-	gap: 5px;
 }
