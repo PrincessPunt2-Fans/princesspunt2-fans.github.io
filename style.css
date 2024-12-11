@@ -226,23 +226,23 @@ table.goods .equipment_effect {
 .book_Material_item > img {
 	width: 80%;
 }
-
+/*
 .book_Material_item > a {
 	line-height: 0.8;
 	padding-top: 5px;
-}
-/*
+}*/
+
 .book_Material_num {
 	position: absolute;  
 	z-index: 2; 
 	right: calc(10% + 2px); 
-	bottom: calc(10px + 1px);
+	bottom: calc(10px + 2px);
 	line-height: 1em;
-	font-size: 1.5em;
-	font-family: "Arial Black";
+	font-size: 1.3em;
+	font-family: "Rubik";
 	color: white;
 	-webkit-text-stroke: 2px black;
-}*/
+}
 
 .tooltip_popup {
 	position: relative;
