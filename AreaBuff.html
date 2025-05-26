@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <base href="https://princesspunt2-fans.github.io/Icons/General/">
+  <title>エリアのバフ (コイン・ドロップ)</title>
+  <style>
+    #countdown {
+      text-align: right;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      table-layout: auto;
+    }
+    td {
+      height: 36px;
+      border: 1px solid #333;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 24px;
+    }
+    .label {
+      width: 100px;
+      font-size: 18px;
+	  padding: 0 2px;
+      font-weight: bold;
+      background: #eee;
+	  white-space: nowrap;
+    }
+	.title {
+      height: 12px;
+      font-size: 12px;
+    }
+	.buff_icon {
+		height:24px; 
+		vertical-align: middle;
+	}
+  </style>
+</head>
+<body>
+
+<div id="countdown"></div>
+<table id="mainTable"></table>
+
+<script>
+  const baseUnix = 1349017200 * 1000;
+  const interval = 40;
+  const groupSpacing = 280;
+  const groupCount = 21;
+  const symbolA = `<img src="ic_up_coin01.png" class="buff_icon" onerror="this.replaceWith(document.createTextNode('💰'))">`;
+  const symbolB = `<img src="ic_up_drop01.png"class="buff_icon" onerror="this.replaceWith(document.createTextNode('📦'))">`;
+  const symbolBOffset = 4;
+  
+  const names = [
+  "Area",
+  "ドーナツ草原", 
+  "ラムネ海岸", 
+  "シャーベット洞窟", 
+  "おしるこ氷河", 
+  "わたあめ雲海",
+  "マシュマロ宮殿", 
+  "チョコレート火山", 
+  "メロン砂漠", 
+  "バナナクレープ密林", 
+  "コンペイトウ遺跡",
+  "ババロア魔城", 
+  "シュークリーム庭園", 
+  "チュロス遊園地", 
+  "みたらし城郭", 
+  "きびだんご孤島",
+  "カステーラ城郭都市", 
+  "メイプルキングダム", 
+  "メイプルドック", 
+  "王都ガレット・デ・ロワ", 
+  "ミルフィーユ大樹",
+  "メレンゲ群島"
+];
+
+  const now = Date.now();
+  const table = document.getElementById("mainTable");
+
+  for (let i = 0; i < groupCount+1; i++) {
+    const row = document.createElement("tr");
+
+    if  (i === 0) {
+		for (let j = 0; j < 8; j++) {
+		  const cell = document.createElement("td");
+		  cell.className = "title";
+		  cell.textContent =  (j > 0) ? "S" + j : names[i];
+		  row.appendChild(cell);
+		}
+	} else {
+		const labelCell = document.createElement("td");
+		labelCell.className = "label";
+		labelCell.textContent =names[i];
+		row.appendChild(labelCell);
+		
+		const cells = [];
+		for (let j = 0; j < 7; j++) {
+		  const cell = document.createElement("td");
+		  cells.push(cell);
+		  row.appendChild(cell);
+		}
+
+		const groupStart = baseUnix + (i-1) * groupSpacing * 60 * 1000;
+		const diffMinutes = (now - groupStart) / (1000 * 60);
+		const moveSteps = Math.floor((diffMinutes - 0.000001) / interval);
+		const posA = moveSteps % 8;
+		const posB = (posA + symbolBOffset) % 8;
+
+		if (posA < 7) cells[posA].innerHTML  = symbolA;
+		if (posB < 7) cells[posB].innerHTML  = symbolB;
+	}
+
+    table.appendChild(row);
+  }
+
+  const countdownEl = document.getElementById("countdown");
+  // 顯示還有幾分鐘換下一格
+  //const minutesSinceLast = Math.floor((now - baseUnix) / (1000 * 60)) % interval;
+  //const remaining = interval - minutesSinceLast;
+  //countdownEl.textContent = `下次變動： ${remaining} 分鐘`;
+  // 顯示什麼時候換下一格
+  const nextUpdate = new Date(baseUnix + Math.ceil((now - baseUnix) / (interval * 60 * 1000)) * interval * 60 * 1000);
+  countdownEl.textContent = `次の変更： ${nextUpdate.toLocaleString('ja-JP', { hour12: false })}`;
+
+</script>
+
+</body>
+</html>
